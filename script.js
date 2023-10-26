@@ -6,7 +6,7 @@ const btnPrev = document.querySelector('.btn-prev')
 
 //faz a busca no back
 const fetchPokemon = async () => {
-  const response = await fetch(`http://db:3000/list`);
+  const response = await fetch(`http://backend:3000/list`);
   if(response.status === 200){
     const data = await response.json()
     return data;
@@ -31,9 +31,9 @@ const renderPokemon = async (pokemon) => {
   const pokemonList = await listPokemon()
   if(pokemonList){
     pokemonImage.style.display = 'block'
-    pokemonName.innerHTML = pokemonList.name[pokemon-1];
-    pokemonId.innerHTML= pokemonList.id[pokemon-1];
-    pokemonImage.src = pokemonList.imageUrl[pokemon-1];
+    pokemonName.innerHTML = pokemonList.name[pokemon];
+    pokemonId.innerHTML= pokemonList.id[pokemon];
+    pokemonImage.src = pokemonList.imageUrl[pokemon];
   } else {
     pokemonImage.style.display = 'none';
     pokemonName.innerHTML = 'Not Found';

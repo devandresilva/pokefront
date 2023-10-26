@@ -45,4 +45,19 @@ const renderPokemon = async (pokemon) => {
   }
 }
 
+btnPrev.addEventListener('click', () => {
+  if(count > 1 && count < 10){
+    count-= 1;
+    renderPokemon(count);
+  }
+});
+
+btnNext.addEventListener('click', () => {
+  if(count < 10){
+    count+= 1;
+   renderPokemon(count);
+  }
+});
+
+const count = 0;
 renderPokemon(0)

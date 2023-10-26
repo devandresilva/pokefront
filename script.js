@@ -60,4 +60,4 @@ btnNext.addEventListener('click', () => {
 });
 
 let count = 0;
-renderPokemon(1)
+renderPokemon(0)

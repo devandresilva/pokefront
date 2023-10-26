@@ -3,14 +3,14 @@ const pokemonId = document.querySelector('.pokemon-number')
 const pokemonImage = document.querySelector('.pokemon-image')
 const btnNext = document.querySelector('.btn-next')
 const btnPrev = document.querySelector('.btn-prev')
-// const hostUrl = window.location.href
-// const host = hostUrl.split("//")[1]
-// const ip = host.split(":")[0]
-// const urlApi = `http://` + ip + ":3000/list"
+const hostUrl = window.location.href
+const host = hostUrl.split("//")[1]
+const ip = host.split(":")[0]
+const urlApi = `http://` + ip + ":3000/list"
 
 //faz a busca no back
 const fetchPokemon = async () => {
-  const response = await fetch('http://backend:3000/list');
+  const response = await fetch(urlApi);
   if(response.status === 200){
     const data = await response.json()
     return data;

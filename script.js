@@ -36,8 +36,8 @@ const renderPokemon = async (pokemon) => {
   if(pokemonList){
     pokemonImage.style.display = 'block'
     pokemonName.innerHTML = pokemonList[pokemon].name;
-    pokemonId.innerHTML= pokemonList[pokemon].id;
-    pokemonImage.src = pokemonList[pokemon].imageUrl;
+    pokemonId.innerHTML= pokemonList[pokemon].idPokemon;
+    pokemonImage.src = pokemonList[pokemon].imageurl;
   } else {
     pokemonImage.style.display = 'none';
     pokemonName.innerHTML = 'Not Found';
@@ -45,4 +45,4 @@ const renderPokemon = async (pokemon) => {
   }
 }
 
-renderPokemon(1)
+renderPokemon(0)

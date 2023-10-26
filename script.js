@@ -35,9 +35,9 @@ const renderPokemon = async (pokemon) => {
   const pokemonList = await listPokemon()
   if(pokemonList){
     pokemonImage.style.display = 'block'
-    pokemonName.innerHTML = pokemonList.name[pokemon];
-    pokemonId.innerHTML= pokemonList.id[pokemon];
-    pokemonImage.src = pokemonList.imageUrl[pokemon];
+    pokemonName.innerHTML = pokemonList[pokemon].name;
+    pokemonId.innerHTML= pokemonList[pokemon].id;
+    pokemonImage.src = pokemonList[pokemon].imageUrl;
   } else {
     pokemonImage.style.display = 'none';
     pokemonName.innerHTML = 'Not Found';

@@ -21,9 +21,9 @@ const fetchPokemon = async () => {
 const listPokemon = async () => {
   const data = await fetchPokemon(); // Chama a função fetchPokemon para obter os dados
   const pokemonList = data.map(itens => ({
-    id: itens.idpokemon,
+    idpokemon: itens.idpokemon,
     name: itens.name,
-    imageUrl: itens.imageurl
+    imageurl: itens.imageurl
   }));
   return pokemonList;
 };
@@ -36,7 +36,7 @@ const renderPokemon = async (pokemon) => {
   if(pokemonList){
     pokemonImage.style.display = 'block'
     pokemonName.innerHTML = pokemonList[pokemon].name;
-    pokemonId.innerHTML= pokemonList[pokemon].idPokemon;
+    pokemonId.innerHTML= pokemonList[pokemon].idpokemon;
     pokemonImage.src = pokemonList[pokemon].imageurl;
   } else {
     pokemonImage.style.display = 'none';

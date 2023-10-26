@@ -20,10 +20,10 @@ const fetchPokemon = async () => {
 // Transforma o dado vindo do back-end em uma lista com os campos desejados (id, name, imageUrl)
 const listPokemon = async () => {
   const data = await fetchPokemon(); // Chama a função fetchPokemon para obter os dados
-  const pokemonList = data.map(pokemon => ({
-    id: pokemon.idPokemon,
-    name: pokemon.name,
-    imageUrl: pokemon.imageUrl
+  const pokemonList = data.map(itens => ({
+    id: itens.idPokemon,
+    name: itens.name,
+    imageUrl: itens.imageUrl
   }));
   return pokemonList;
 };

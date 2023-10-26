@@ -59,5 +59,5 @@ btnNext.addEventListener('click', () => {
   }
 });
 
-const count = 0;
-renderPokemon(0)
+let count = 0;
+renderPokemon(1)

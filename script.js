@@ -46,7 +46,7 @@ const renderPokemon = async (pokemon) => {
 }
 
 btnPrev.addEventListener('click', () => {
-  if(count > 1 && count < 10){
+  if(count >= 1 && count < 10){
     count-= 1;
     renderPokemon(count);
   }

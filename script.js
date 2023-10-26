@@ -6,7 +6,7 @@ const btnPrev = document.querySelector('.btn-prev')
 
 //faz a busca no back
 const fetchPokemon = async () => {
-  const response = await fetch(`/list`);
+  const response = await fetch(`http://db:3000/list`);
   if(response.status === 200){
     const data = await response.json()
     return data;

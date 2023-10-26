@@ -53,11 +53,11 @@ btnPrev.addEventListener('click', () => {
 });
 
 btnNext.addEventListener('click', () => {
-  if(count < 10){
+  if(count < 9){
     count+= 1;
    renderPokemon(count);
   }
 });
 
-let count = 0;
+let count = 1;
 renderPokemon(0)
